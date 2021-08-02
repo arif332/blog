@@ -93,9 +93,9 @@ Tmux is a great tool but I havn't used because copy and paste method is differen
 
 
 
-## Bookmark Allowed Website: Important Content / Exam Objective Example ([Mainly kubernetes.io](kubernetes.io))
+## Bookmark Allowed Website: Important Content / Exam Objective Example ([Mainly kubernetes.io](https://kubernetes.io))
 
-In my bookmark manager, I added necessary sample yaml and exam objective topics from [kubernetes](kubernetes.io) and external allowed sites so that I could check content quickly when it is required to solve the exam question. 
+In my bookmark manager, I added necessary sample yaml and exam objective topics from [kubernetes](https://kubernetes.io) and external allowed sites so that I could check content quickly when it is required to solve the exam question. 
 
 
 
