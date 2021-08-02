@@ -4,7 +4,7 @@ description: "Kubernetes certification exam preparation tips"
 layout: post
 toc: false
 comments: true
-search_exclude: true
+search_exclude: false
 hide: false
 author: Arif Hossen
 categories: [Kubernetes, Certification, Cloud Native]
