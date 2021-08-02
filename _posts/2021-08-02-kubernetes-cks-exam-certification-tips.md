@@ -145,7 +145,7 @@ In this way, most likely, you will be able to avoid troubleshooting activity for
 - https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.21/#securitycontext-v1-core
 - https://kubernetes.io/docs/concepts/containers/runtime-class/
 - https://kubernetes.io/docs/tutorials/clusters/apparmor/
-- https://kubernetes.io/docs/tutorials/clusters/seccomp/#create-a-pod-with-a-seccomp-profile-for-syscall-auditing
+- https://kubernetes.io/docs/tutorials/clusters/seccomp#create-a-pod-with-a-seccomp-profile-for-syscall-auditing
 - https://kubernetes.io/docs/tasks/debug-application-cluster/audit/
 - https://kubernetes.io/blog/2018/07/18/11-ways-not-to-get-hacked/
 - https://aquasecurity.github.io/trivy/v0.18.3/
