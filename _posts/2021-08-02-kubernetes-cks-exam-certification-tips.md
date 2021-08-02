@@ -115,8 +115,8 @@ In this way, most likely, you will be able to avoid troubleshooting activity for
 
 
 # References
-- https://www.cncf.io/certification/cks/
-- https://docs.linuxfoundation.org/tc-docs/certification/important-instructions-cks
+- [CNCF](https://www.cncf.io/certification/cks/)
+- [CNCF Important Information Regarding CKS Exam](https://docs.linuxfoundation.org/tc-docs/certification/important-instructions-cks)
 - [Kubernetes Security Essentials (LFS260) by THE LINUX FOUNDATION](https://training.linuxfoundation.org/training/kubernetes-security-essentials-lfs260/)
 - [Kubernetes CKS 2021 Complete Course - Theory - Practice by Kim Wüstkamp, Killer Shell](https://www.udemy.com/share/103Mds2@FG1jV2JjSVEHdEBGC3JNfT1HYA==/)
 - [Certified Kubernetes Security Specialist (CKS) by William Boyd, A CLOUD GURU](https://acloudguru.com/course/certified-kubernetes-security-specialist-cks)
@@ -127,36 +127,36 @@ In this way, most likely, you will be able to avoid troubleshooting activity for
 # Appendix
 
 ## Bookmark Link for the Study
-- https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/
-- https://kubernetes.io/blog/2019/08/06/opa-gatekeeper-policy-and-governance-for-kubernetes/
-- https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#imagepolicywebhook
-- https://kubernetes.io/docs/reference/access-authn-authz/webhook/
-- https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/#options
-- https://github.com/kubernetes/dashboard/blob/master/docs/common/dashboard-arguments.md
-- https://kubernetes.io/docs/concepts/services-networking/ingress/
-- https://kubernetes.io/docs/concepts/services-networking/network-policies/#networkpolicy-resource
-- https://kubernetes.io/docs/concepts/security/controlling-access/
-- https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
-- https://kubernetes.io/docs/reference/access-authn-authz/rbac/
-- https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/
-- https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
-- https://kubernetes.io/docs/concepts/policy/pod-security-policy/
-- https://kubernetes.io/docs/concepts/security/pod-security-standards/
-- https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.21/#securitycontext-v1-core
-- https://kubernetes.io/docs/concepts/containers/runtime-class/
-- https://kubernetes.io/docs/tutorials/clusters/apparmor/
-- https://kubernetes.io/docs/tutorials/clusters/seccomp#create-a-pod-with-a-seccomp-profile-for-syscall-auditing
-- https://kubernetes.io/docs/tasks/debug-application-cluster/audit/
-- https://kubernetes.io/blog/2018/07/18/11-ways-not-to-get-hacked/
-- https://aquasecurity.github.io/trivy/v0.18.3/
-- https://github.com/aquasecurity/kube-bench
-- https://gitlab.com/apparmor/apparmor/-/wikis/Documentation
-- https://falco.org/docs/
-- https://docs.sysdig.com/?lang=en
-- https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
-- https://kubernetes.io/blog/2021/04/06/podsecuritypolicy-deprecation-past-present-and-future/
-- https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/
-- https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
+- [Encrypt Data](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
+- [Opa-gatekeeper-policy-and-governance-for-kubernetes](https://kubernetes.io/blog/2019/08/06/opa-gatekeeper-policy-and-governance-for-kubernetes/)
+- [Imagepolicywebhook](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#imagepolicywebhook)
+- [Webhook](https://kubernetes.io/docs/reference/access-authn-authz/webhook/)
+- [Kube-apiserver](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/#options)
+- [Dashboard-arguments](https://github.com/kubernetes/dashboard/blob/master/docs/common/dashboard-arguments.md)
+- [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+- [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/#networkpolicy-resource)
+- [Controlling-access](https://kubernetes.io/docs/concepts/security/controlling-access/)
+- [Configure-service-account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
+- [RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
+- [Certificate-signing-requests/](https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/)
+- [Security-context](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
+- [Pod-security-policy](https://kubernetes.io/docs/concepts/policy/pod-security-policy/)
+- [Pod-security-standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/)
+- [Kubernetes API securitycontext-v1-core](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.21/#securitycontext-v1-core)
+- [Runtime Class: gVisor](https://kubernetes.io/docs/concepts/containers/runtime-class/)
+- [Apparmor](https://kubernetes.io/docs/tutorials/clusters/apparmor/)
+- [Seccomp](https://kubernetes.io/docs/tutorials/clusters/seccomp#create-a-pod-with-a-seccomp-profile-for-syscall-auditing)
+- [Audit](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/)
+- [11-ways-not-to-get-hacked](https://kubernetes.io/blog/2018/07/18/11-ways-not-to-get-hacked/)
+- [Trivy](https://aquasecurity.github.io/trivy/v0.18.3/)
+- [Kube-bench](https://github.com/aquasecurity/kube-bench)
+- [Apparmor Wiki](https://gitlab.com/apparmor/apparmor/-/wikis/Documentation)
+- [Falco](https://falco.org/docs/)
+- [Sysdig](https://docs.sysdig.com/?lang=en)
+- [Managing-tls-in-a-cluster](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/)
+- [Podsecuritypolicy-deprecation-past-present-and-future](https://kubernetes.io/blog/2021/04/06/podsecuritypolicy-deprecation-past-present-and-future/)
+- [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/)
+- [Kubeadm Upgrade](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/)
 
 ## Frequenly Use vi/vim commands
 
