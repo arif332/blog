@@ -1,4 +1,3 @@
-
 ---
 title: "Certified Kubernetes Security Specialist (CKS) Exam Preparation Tips"
 description: "Kubernetes certification exam preparation tips"
