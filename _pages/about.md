@@ -4,8 +4,6 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+I have seventeen years of experience in IT, Telecom and Cloud Computing Industries. My expertise domain is in DevOps, Cloud Native Computing, Containerized Workload, Kubernetes, Red Hat Technologies, VMware and Ericsson Business Support System(BSS) Domain.
 
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+For more information about me please [visit](https://arif332.github.io).
