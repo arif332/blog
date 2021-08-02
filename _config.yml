@@ -60,7 +60,7 @@ show_tags: true
 comments: true
 
 # Add your Google Analytics ID here if you have one and want to use it
-google_analytics: G-DWSSJNLDH4
+google_analytics: G-Y4CZFH7DDN
 
 exclude:
   - docker-compose.yml
