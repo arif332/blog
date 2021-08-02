@@ -1,0 +1,192 @@
+
+<hr />
+<p>title: “Certified Kubernetes Security Specialist (CKS) Exam Preparation Tips”
+description: “Kubernetes certification exam preparation tips”
+layout: post
+toc: false
+comments: true
+search_exclude: true
+hide: false
+author: Arif Hossen
+categories: [Kubernetes, Certification, Cloud Native]
+show_tags: true
+—</p>
+
+<ul>
+  <li><a href="#cks-exam-preparation-tips">CKS Exam Preparation Tips</a>
+    <ul>
+      <li><a href="#course-taken">Course Taken</a></li>
+      <li><a href="#vi--vim-setting-for-yaml-to-edit-comfortably--efficiently">Vi / Vim Setting for yaml to Edit Comfortably &amp; Efficiently</a></li>
+      <li><a href="#command-alias">Command Alias</a></li>
+      <li><a href="#tmux-setting">Tmux Setting</a></li>
+      <li><a href="#bookmark-allowed-website-important-content--exam-objective-example-mainly-kubernetesio">Bookmark Allowed Website: Important Content / Exam Objective Example (Mainly kubernetes.io)</a></li>
+      <li><a href="#lab-practice">Lab Practice</a></li>
+      <li><a href="#during-exam">During Exam</a></li>
+    </ul>
+  </li>
+  <li><a href="#references">References</a></li>
+  <li><a href="#appendix">Appendix</a>
+    <ul>
+      <li><a href="#bookmark-link-for-the-study">Bookmark Link for the Study</a></li>
+      <li><a href="#frequenly-use-vivim-commands">Frequenly Use vi/vim commands</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="cks-exam-preparation-tips">CKS Exam Preparation Tips</h1>
+
+<p>Recently, I have completed Certified Kubernetes Security Specialist (<a href="https://www.cncf.io/certification/cks/">CKS</a>) certification of <a href="https://www.linuxfoundation.org">The Linux Foundation</a>. Here are a few tips for the exam which might help you as well to crack the same exam.</p>
+
+<h2 id="course-taken">Course Taken</h2>
+<p>I have taken the following three courses before giving the exam. In these courses, I got practice material, hands-on lab and exam simulation environment which helped me to clear the CKS exam.</p>
+<ul>
+  <li><a href="https://training.linuxfoundation.org/training/kubernetes-security-essentials-lfs260/">Kubernetes Security Essentials (LFS260) by THE LINUX FOUNDATION</a></li>
+  <li><a href="https://www.udemy.com/share/103Mds2@FG1jV2JjSVEHdEBGC3JNfT1HYA==/">Kubernetes CKS 2021 Complete Course - Theory - Practice by Kim Wüstkamp, Killer Shell</a></li>
+  <li><a href="https://acloudguru.com/course/certified-kubernetes-security-specialist-cks">Certified Kubernetes Security Specialist (CKS) by William Boyd, A CLOUD GURU</a></li>
+</ul>
+
+<h2 id="vi--vim-setting-for-yaml-to-edit-comfortably--efficiently">Vi / Vim Setting for yaml to Edit Comfortably &amp; Efficiently</h2>
+
+<p>Added few setting in .vimrc profile which help to edit yaml file effectively and efficiently.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">&gt;~/.vimrc
+set ts=2 sw=2 sts=2 et ai number
+syntax on
+</span><span class="no">EOF
+</span></code></pre></div></div>
+
+<p>Or may be follow below procedure:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"set ts=2 sts=2 sw=2 et number"</span> <span class="o">&gt;&gt;</span> ~/.vimrc
+</code></pre></div></div>
+
+<p>While copying part of yaml from kubernetes.io site, enable paste mode first using <code class="language-plaintext highlighter-rouge">:set paste</code> which will keep source formatting.</p>
+
+<p>Disable paste mode by using command: <code class="language-plaintext highlighter-rouge">:set nopaste</code> in vim command mode. Again turn on auto intendation mode using <code class="language-plaintext highlighter-rouge">:set ai</code>.</p>
+
+<p>To indent multiple line, go to appropriate line and press <code class="language-plaintext highlighter-rouge">:shift+v</code> and select required line using <code class="language-plaintext highlighter-rouge">up/down</code> arrow keys. Then to indent the marked lines press  <code class="language-plaintext highlighter-rouge">&gt;</code>or <code class="language-plaintext highlighter-rouge">&lt;</code> and to repeat same action use <code class="language-plaintext highlighter-rouge">.</code>.</p>
+
+<h2 id="command-alias">Command Alias</h2>
+
+<p>In CKS exam environment, by default <code class="language-plaintext highlighter-rouge">kubectl</code> with <code class="language-plaintext highlighter-rouge">k</code> alias and bash autocompletion is configured.</p>
+
+<p>Used below command alias to type command quickly and check various resources in a single command for a namespace.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">&gt;kalias.sh
+alias kgn="k get node" 
+alias aa='k get all,sa,ep,sc,pv,pvc,cm,netpol'
+alias kn='k config set-context --current --namespace '
+alias kcc='k config get-contexts'
+
+# help to add parameter quickly with kubectl or k 
+export do="--dry-run=client -o yaml" o="-o wide" y="-o yaml" l="--show-labels" 
+</span><span class="no">EOF
+
+</span><span class="nb">source </span>kalias.sh
+</code></pre></div></div>
+
+<h2 id="tmux-setting">Tmux Setting</h2>
+
+<p>Tmux is a great tool but I havn’t used because copy and paste method is different than the normal termal. Also time is ticking and need to move quickly to answer all the questions…..</p>
+
+<h2 id="bookmark-allowed-website-important-content--exam-objective-example-mainly-kubernetesio">Bookmark Allowed Website: Important Content / Exam Objective Example (<a href="kubernetes.io">Mainly kubernetes.io</a>)</h2>
+
+<p>In my bookmark manager, I added necessary sample yaml and exam objective topics from <a href="kubernetes.io">kubernetes</a> and external allowed sites so that I could check content quickly when it is required to solve the exam question.</p>
+
+<h2 id="lab-practice">Lab Practice</h2>
+
+<p>At the end, do a lot of practice in your lab which will help to think and make an action plan for the question in the exam. To answer all the questions you have to act quickly and the allowed time is only 120 min which runs fast.</p>
+
+<ul>
+  <li>Use imperative command to create skeleton for pod or deployment and then modify/add extra parameters</li>
+  <li>Use imperative command to expose service</li>
+  <li>Use bash search command <code class="language-plaintext highlighter-rouge">ctl+r</code>to run previously executed command.</li>
+</ul>
+
+<h2 id="during-exam">During Exam</h2>
+<p>During the exam, first try to solve the question which has more weight compared to the lower weight question.</p>
+
+<p>In this way, most likely, you will be able to avoid troubleshooting activity for the lower weight question if not solved in the first attempt or easily within your timeline. Because of exam pressure, sometimes you may give more time to lower weight questions, As a consequence, at the end you may not be able to give sufficient time to higher weight questions.</p>
+
+<h1 id="references">References</h1>
+<ul>
+  <li>https://www.cncf.io/certification/cks/</li>
+  <li>https://docs.linuxfoundation.org/tc-docs/certification/important-instructions-cks</li>
+  <li><a href="https://training.linuxfoundation.org/training/kubernetes-security-essentials-lfs260/">Kubernetes Security Essentials (LFS260) by THE LINUX FOUNDATION</a></li>
+  <li><a href="https://www.udemy.com/share/103Mds2@FG1jV2JjSVEHdEBGC3JNfT1HYA==/">Kubernetes CKS 2021 Complete Course - Theory - Practice by Kim Wüstkamp, Killer Shell</a></li>
+  <li><a href="https://acloudguru.com/course/certified-kubernetes-security-specialist-cks">Certified Kubernetes Security Specialist (CKS) by William Boyd, A CLOUD GURU</a></li>
+  <li><a href="https://killer.sh/">CKS CKA and CKAD Simulator</a></li>
+</ul>
+
+<h1 id="appendix">Appendix</h1>
+
+<h2 id="bookmark-link-for-the-study">Bookmark Link for the Study</h2>
+<ul>
+  <li>https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/</li>
+  <li>https://kubernetes.io/blog/2019/08/06/opa-gatekeeper-policy-and-governance-for-kubernetes/</li>
+  <li>https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#imagepolicywebhook</li>
+  <li>https://kubernetes.io/docs/reference/access-authn-authz/webhook/</li>
+  <li>https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/#options</li>
+  <li>https://github.com/kubernetes/dashboard/blob/master/docs/common/dashboard-arguments.md</li>
+  <li>https://kubernetes.io/docs/concepts/services-networking/ingress/</li>
+  <li>https://kubernetes.io/docs/concepts/services-networking/network-policies/#networkpolicy-resource</li>
+  <li>https://kubernetes.io/docs/concepts/security/controlling-access/</li>
+  <li>https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/</li>
+  <li>https://kubernetes.io/docs/reference/access-authn-authz/rbac/</li>
+  <li>https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/</li>
+  <li>https://kubernetes.io/docs/tasks/configure-pod-container/security-context/</li>
+  <li>https://kubernetes.io/docs/concepts/policy/pod-security-policy/</li>
+  <li>https://kubernetes.io/docs/concepts/security/pod-security-standards/</li>
+  <li>https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.21/#securitycontext-v1-core</li>
+  <li>https://kubernetes.io/docs/concepts/containers/runtime-class/</li>
+  <li>https://kubernetes.io/docs/tutorials/clusters/apparmor/</li>
+  <li>https://kubernetes.io/docs/tutorials/clusters/seccomp/#create-a-pod-with-a-seccomp-profile-for-syscall-auditing</li>
+  <li>https://kubernetes.io/docs/tasks/debug-application-cluster/audit/</li>
+  <li>https://kubernetes.io/blog/2018/07/18/11-ways-not-to-get-hacked/</li>
+  <li>https://aquasecurity.github.io/trivy/v0.18.3/</li>
+  <li>https://github.com/aquasecurity/kube-bench</li>
+  <li>https://gitlab.com/apparmor/apparmor/-/wikis/Documentation</li>
+  <li>https://falco.org/docs/</li>
+  <li>https://docs.sysdig.com/?lang=en</li>
+  <li>https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/</li>
+  <li>https://kubernetes.io/blog/2021/04/06/podsecuritypolicy-deprecation-past-present-and-future/</li>
+  <li>https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/</li>
+  <li>https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/</li>
+</ul>
+
+<h2 id="frequenly-use-vivim-commands">Frequenly Use vi/vim commands</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>w <span class="o">==&gt;</span> jump by start of words
+4w <span class="o">&gt;&gt;</span> jump muultiple word
+e <span class="o">==&gt;</span> jump by end of words
+3e&gt;&gt; multiple at a <span class="nb">time
+</span>b <span class="o">==&gt;</span> jump backward by words
+0 <span class="o">==&gt;</span> <span class="o">(</span>zero<span class="o">)</span> is to jump to the start of the line
+<span class="nv">$ </span><span class="o">==&gt;</span> <span class="o">(</span>dollar<span class="o">)</span> jumps to end of line
+gg <span class="o">==&gt;</span> to go to top of page
+G <span class="o">==&gt;</span> to go to bottom of page
+<span class="nb">dd</span> <span class="o">==&gt;</span> delete current line
+y <span class="o">==&gt;</span> yank/copy current line
+P <span class="o">==&gt;</span> <span class="nb">paste </span>content before cursor
+p <span class="o">==&gt;</span> paster content after cursor
+i <span class="o">==&gt;</span> enter insert mode to input text <span class="k">in </span>current cursor location
+a <span class="o">==&gt;</span> enter insert mode and move cursor to append to the existing line
+u <span class="o">==&gt;</span> undo last action
+<span class="nb">.</span> <span class="o">==&gt;</span> <span class="o">(</span>dot<span class="o">)</span> to repeat last <span class="nb">command
+</span>Ctrl + r <span class="o">==&gt;</span> redo last action
+v <span class="o">==&gt;</span> to visually <span class="k">select </span>multiple lines
+
+
+:5 <span class="o">==&gt;</span> go to 5th line <span class="k">in </span>the file
+:N <span class="o">==&gt;</span> go to Nth line <span class="k">in </span>the file
+/search_text <span class="o">==&gt;</span> search <span class="k">for </span>search_text
+n <span class="o">==&gt;</span> repeat search <span class="k">in </span>same direction
+:%s/old_text/new_text/g <span class="o">==&gt;</span> replace all old_text with new_text throughput file
+:%s/old_text/new_text/gc <span class="o">==&gt;</span> replace all old_text with new_text throughput file asking <span class="k">for </span>confirmation before making each change
+:set et <span class="o">==&gt;</span> <span class="nb">set </span>expandtabs to spaces
+:set number <span class="o">==&gt;</span> show line numbers
+:set <span class="nv">sw</span><span class="o">=</span>2 <span class="o">==&gt;</span> shiftwidth of tab from default 8 to 2 spaces
+:set <span class="nv">ts</span><span class="o">=</span>2 <span class="o">==&gt;</span> <span class="nb">set </span>tabstop to 2 spaces
+:set sts <span class="o">==&gt;</span> <span class="nb">set </span>softtabstop to 2 spaces
+</code></pre></div></div>
+
