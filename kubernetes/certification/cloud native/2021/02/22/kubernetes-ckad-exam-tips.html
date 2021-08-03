@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -178,6 +178,23 @@ complete -F __start_kubectl k
 </span><span class="no">EOF
 
 </span><span class="nb">source </span>kalias.sh
+</code></pre></div></div>
+
+<p>Command alias and environment will help to type or generate yaml spec quickly and then modify specification file if required.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># check current context (as per command alias above)</span>
+kcc 
+
+<span class="c"># set namespace (as per command alias above)</span>
+kn namespace
+
+<span class="c"># check necessary information by one command (as per command alias above)</span>
+aa
+
+<span class="c"># for pod spec</span>
+k run podname <span class="nt">--image</span><span class="o">=</span>nginx <span class="nv">$do</span> <span class="o">&gt;</span> pod-spec.yaml
+
+<span class="c"># for deployment spec</span>
+k create deployment nginx-deploy <span class="nt">--image</span><span class="o">=</span>nginx <span class="nt">-r</span> 3 <span class="nv">$do</span> <span class="o">&gt;</span> deployment-spec.yaml
 </code></pre></div></div>
 
 <h2 id="tmux-setting">
