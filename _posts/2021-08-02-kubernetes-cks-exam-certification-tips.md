@@ -7,7 +7,7 @@ comments: true
 search_exclude: false
 hide: false
 author: Arif Hossen
-categories: [Kubernetes, Certification, Cloud Native]
+categories: [Kubernetes, Certification, Security, Cloud Native]
 show_tags: true
 ---
 
